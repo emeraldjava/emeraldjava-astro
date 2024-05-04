@@ -2,6 +2,8 @@
 
 https://github.com/emeraldjava/emeraldjava-astro
 
+https://emeraldjava.github.io/emeraldjava-astro/
+
 ## 04-05-2024
 
 - https://github.com/withastro/github-pages
