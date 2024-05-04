@@ -1,10 +1,11 @@
 # build output
 dist/
 .output/
+docs/
+new/
 
 # dependencies
 node_modules/
-new
 .husky
 
 # logs
