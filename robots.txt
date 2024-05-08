@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://emeraldjava.github.io/emeraldjava-astro/sitemap-index.xml
