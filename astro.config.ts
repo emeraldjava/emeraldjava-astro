@@ -10,7 +10,8 @@ import { build } from "astro";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/reference/configuration-reference/#site
-  site: 'https://emeraldjava.github.io/emeraldjava-astro',
+  site: 'https://emeraldjava.github.io',
+  base: 'emeraldjava-astro',
   integrations: [
     tailwind({
       applyBaseStyles: true,
