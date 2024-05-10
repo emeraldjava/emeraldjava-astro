@@ -4,6 +4,25 @@ https://github.com/emeraldjava/emeraldjava-astro
 
 https://emeraldjava.github.io/emeraldjava-astro/
 
+## 10-05-2024
+
+Error when not using the 'dist' folder.
+
+    Run actions/upload-pages-artifact@v3
+    with:
+    path: ./dist/
+    name: github-pages
+    retention-days: 1
+    env:
+    PACKAGE_MANAGER: npm
+    LOCKFILE: package-lock.json
+    VERSION: latest
+    Run echo ::group::Archive artifact
+    Archive artifact
+    tar: dist/: Cannot open: No such file or directory
+    tar: Error is not recoverable: exiting now
+    Error: Process completed with exit code 2.
+
 ## 04-05-2024
 
 - https://github.com/withastro/github-pages
@@ -13,3 +32,5 @@ https://emeraldjava.github.io/emeraldjava-astro/
 
 Actions
 - https://github.com/emeraldjava/emeraldjava-astro/actions
+- https://blackgirlbytes.dev/how-to-deploy-an-astro-site-to-github-pages
+- https://dev.to/davorg/deploying-github-pages-site-with-github-workflows-3bhh

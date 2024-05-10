@@ -3,7 +3,7 @@
 
 # Except these files & folders
 !/src
-!/public
+!/publix
 !/.github
 !tsconfig.json
 !astro.config.ts
