@@ -6,8 +6,8 @@ export const SITE: Site = {
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
   title: "emeraldjava AstroPaper",
   ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: true,
-  postPerPage: 3,
+  lightAndDarkMode: false,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -31,18 +31,6 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
-    name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Facebook`,
-    active: true,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-  {
     name: "LinkedIn",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on LinkedIn`,
@@ -57,8 +45,8 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Twitter",
     href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    linkTitle: `${SITE.website} on Twitter`,
+    active: true,
   },
   {
     name: "Twitch",

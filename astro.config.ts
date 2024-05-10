@@ -9,10 +9,11 @@ import { build } from "astro";
 
 // https://astro.build/config
 export default defineConfig({
+  // https://docs.astro.build/en/reference/configuration-reference/#site
   site: 'https://emeraldjava.github.io/emeraldjava-astro',
   integrations: [
     tailwind({
-      applyBaseStyles: false,
+      applyBaseStyles: true,
     }),
     react(),
     sitemap(),
@@ -33,6 +34,13 @@ export default defineConfig({
     },
   },
   vite: {
+    // build: {
+    //   rollupOptions: {
+    //     output: {
+    //       entryFileNames: '[name]-[hash].js',
+    //     }
+    //   }
+    // },
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
@@ -43,9 +51,9 @@ export default defineConfig({
   // So we're instructing Astro to put the static build output in a folder of that name.
   outDir: './dist',
 
-  output: 'static',
+  //output: 'static',
   // The folder name Astro uses for static files (`public`) is already reserved
   // for the build output. So in deviation from the defaults we're using a folder
   // called `static` instead.
-  publicDir: 'static'
+  publicDir: './static'
 });

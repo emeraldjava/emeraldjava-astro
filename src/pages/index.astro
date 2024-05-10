@@ -17,13 +17,32 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+// https://everythingcs.dev/blog/how-to-get-current-page-url-in-astro/
+console.log(Astro.url);
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>emeraldjava-astro: Hi</h1>
+
+      <!--<li>-->
+      <!--  <a-->
+      <!--      class={Astro.url.pathname.split("/")[1] === "" ? "underline" : ""}-->
+      <!--      href="/">Home</a>-->
+      <!--</li>-->
+      <!--<li>-->
+      <!--  <a-->
+      <!--      class={Astro.url.pathname.split("/")[1] === "blog"-->
+      <!--          ? "underline"-->
+      <!--          : ""}-->
+      <!--      href="/blog">Blog</a>-->
+      <!--</li>-->
+
+
+
       <a
         target="_blank"
         href="/rss.xml"
