@@ -4,8 +4,6 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
-import { SITE } from "./src/config";
-import { build } from "astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,10 +27,10 @@ export default defineConfig({
         },
       ],
     ],
-    shikiConfig: {
-      theme: "one-dark-pro",
-      wrap: true,
-    },
+    // shikiConfig: {
+    //   theme: "one-dark-pro",
+    //   wrap: true,
+    // },
   },
   vite: {
     // build: {
@@ -56,5 +54,5 @@ export default defineConfig({
   // The folder name Astro uses for static files (`public`) is already reserved
   // for the build output. So in deviation from the defaults we're using a folder
   // called `static` instead.
-  publicDir: './static'
+  //publicDir: './static'
 });
