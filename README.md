@@ -4,6 +4,15 @@ https://github.com/emeraldjava/emeraldjava-astro
 
 https://emeraldjava.github.io/emeraldjava-astro/
 
+## 11-05-2024
+
+Use this conditional for the base path loading
+
+    base: import.meta.env.DEV ? "." : "/my-sub-path",
+
+- https://github.com/withastro/astro/issues/5512#issuecomment-1751687848
+- https://keystatic.com/
+
 ## 10-05-2024
 
 Error when not using the 'dist' folder.

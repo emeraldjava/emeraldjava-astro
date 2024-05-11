@@ -19,7 +19,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const socialCount = SOCIALS.filter(social => social.active).length;
 
 // https://everythingcs.dev/blog/how-to-get-current-page-url-in-astro/
-console.log(Astro.url);
+//console.log(Astro.url);
+//console.log('The import.meta.env.BASE value');
+//console.log(JSON.stringify(import.meta.env.BASE)); // "123"
+//console.log('process.env.BASE');
+//console.log(process.env.BASE);
 ---
 
 <Layout>
@@ -27,7 +31,8 @@ console.log(Astro.url);
   <main id="main-content">
     <section id="hero">
       <h1>emeraldjava-astro: Hi</h1>
-
+      <h2>Vite is running in %MODE%</h2>
+      <p>Using data from %VITE_BASE%</p>
       <!--<li>-->
       <!--  <a-->
       <!--      class={Astro.url.pathname.split("/")[1] === "" ? "underline" : ""}-->

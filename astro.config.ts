@@ -5,11 +5,25 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 
+//console.log(process.env)
+console.log('config loading');
+// https://vitejs.dev/guide/env-and-mode.html
+console.log(`Hello import.meta.env.MODE`)
+console.log(import.meta.env.MODE);
+
+//console.log(import.meta.env.BASE) // "123"
+console.log(import.meta.env.VITE_BASE) // "123"
+//console.log(import.meta.env.VITE_SOME_KEY) // "123"
+//console.log(import.meta.env.DB_PASSWORD) // undefined
+//console.log(`${process.env.BASE}`);
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/reference/configuration-reference/#site
   site: 'https://emeraldjava.github.io',
-  base: 'emeraldjava-astro',
+  // See https://github.com/withastro/astro/issues/5512
+  base: import.meta.env.DEV ? "." : "/emeraldjava-astro",
+  //base: import.meta.env.VITE_BASE,
   integrations: [
     tailwind({
       applyBaseStyles: true,
