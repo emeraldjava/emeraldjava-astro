@@ -20,9 +20,9 @@ console.log(import.meta.env.VITE_BASE) // "123"
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/reference/configuration-reference/#site
-  site: 'https://emeraldjava.github.io',
+  site: 'https://emeraldjava.github.io/emeraldjava-astro',
   // See https://github.com/withastro/astro/issues/5512
-  base: import.meta.env.DEV ? "." : "/emeraldjava-astro",
+  //base: import.meta.env.DEV ? "." : "/emeraldjava-astro",
   //base: import.meta.env.VITE_BASE,
   integrations: [
     tailwind({
