@@ -11,6 +11,9 @@ console.log('config loading');
 console.log(`Hello import.meta.env.MODE`)
 console.log(import.meta.env.MODE);
 
+console.log(`Hello import.meta.env.DEV`)
+console.log(import.meta.env.DEV);
+
 //console.log(import.meta.env.BASE) // "123"
 console.log(import.meta.env.VITE_BASE) // "123"
 //console.log(import.meta.env.VITE_SOME_KEY) // "123"
@@ -20,9 +23,12 @@ console.log(import.meta.env.VITE_BASE) // "123"
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/reference/configuration-reference/#site
-  site: 'https://emeraldjava.github.io/emeraldjava-astro',
+  // see https://config.tips/c/astro/dynamic-astro-site-value/
+  site: import.meta.env.DEV ? "http://localhost:4321" : 'https://emeraldjava.github.io/',
   // See https://github.com/withastro/astro/issues/5512
-  //base: import.meta.env.DEV ? "." : "/emeraldjava-astro",
+  // https://docs.astro.build/en/guides/environment-variables/
+  // https://vitejs.dev/guide/env-and-mode.html#env-files
+  base: import.meta.env.DEV ? "." : "/emeraldjava-astro",
   //base: import.meta.env.VITE_BASE,
   integrations: [
     tailwind({
